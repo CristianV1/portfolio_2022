@@ -2,7 +2,6 @@
   position: relative;
   width: 350px;
   min-height: 250px;
-  z-index: -1;
 }
 
 .card__holder {
