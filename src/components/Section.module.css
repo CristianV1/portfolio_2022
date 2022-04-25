@@ -1,0 +1,14 @@
+:root {
+  --nav-color: #000101;
+  --nav_items-color: #fff;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  height: 100vh;
+  color: rebeccapurple;
+  flex-grow: 1;
+}

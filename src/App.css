@@ -1,10 +1,59 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,500;0,900;1,200;1,400;1,600&display=swap");
+
+:root {
+  --nav-color: #000101;
+  --text-color: #fff;
+  --resalt_text-color: #bb3961;
+  --color-changer1: #bb3961;
+  --color-changer2: #dc03ba;
+  --color-changer3: #c05c96;
+  --color-changer4: #e079b5;
+  --back-color: #1b1b1b;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  text-align: center;
+  background-color: #000101;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+  background-color: transparent !important;
+}
+
+body::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
+  width: 9px; /* width of the entire scrollbar */
+  animation: scrollColorChanger 4s infinite;
+  -webkit-animation: scrollColorChanger 4s infinite;
+}
+
+body::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track {
+  background: var(--back-color); /* color of the tracking area */
+  animation: scrollColorChanger 4s infinite;
+  -webkit-animation: scrollColorChanger 4s infinite;
+}
+
+body::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+  animation: scrollColorChanger 4s infinite;
+  -webkit-animation: scrollColorChanger 4s infinite;
+  background-color: var(--resalt_text-color); /* color of the scroll thumb */
+  border-radius: 2px; /* roundness of the scroll thumb */
+  /* creates padding around scroll thumb */
+}
+
+* {
+  font-family: "Libre Bodoni", serif;
+  font-family: "Nunito", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -28,11 +77,21 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes scrollColorChanger {
+  0% {
+    background: var(--resalt_text-color);
   }
-  to {
-    transform: rotate(360deg);
+  40% {
+    background: #dc03ba;
+  }
+
+  60% {
+    /*background: #c05c96;*/
+    background: red;
+  }
+
+  80% {
+    background: #e079b5;
+    background: blue;
   }
 }

@@ -1,0 +1,14 @@
+:root {
+  --nav-color: #000101;
+  scroll-behavior: smooth;
+}
+
+.distribution {
+  display: flex;
+}
+
+.section__holder {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}

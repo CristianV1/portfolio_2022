@@ -1,0 +1,101 @@
+:root {
+  --nav-color: #000101;
+  --text-color: #fff;
+  --resalt_text-color: #bb3961;
+  --color-changer1: #bb3961;
+  --color-changer2: #dc03ba;
+  --color-changer3: #c05c96;
+  --color-changer4: #e079b5;
+}
+
+.holder {
+  text-align: left;
+
+  /*  padding: 20px;*/
+}
+
+.resalt__text {
+  font-size: 45px;
+  font-weight: 1000;
+  text-align: left;
+  color: var(--resalt_text-color);
+  animation: textColorChanger 3s infinite;
+  -webkit-animation: textColorChanger 3s infinite;
+}
+
+.title__text {
+  font-size: 35px;
+
+  font-weight: 700;
+  text-align: left;
+
+  color: var(--text-color);
+}
+
+.common__text {
+  font-size: 30px;
+
+  font-weight: 500;
+  text-align: left;
+
+  color: var(--text-color);
+}
+
+.button {
+  margin: 4px 0;
+  width: 150px;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 5px;
+  padding: 2px 10px;
+  font-weight: 500;
+  background-color: #000101;
+  color: var(--text-color);
+  animation: borderColorChanger 3s infinite;
+  border: 3px solid #bb3961;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-animation: borderColorChanger 3s infinite;
+}
+
+.button:hover {
+  border: 3px solid #ce4971;
+}
+
+@keyframes textColorChanger {
+  0% {
+    color: var(--resalt_text-color);
+  }
+
+  40% {
+    color: #dc03ba;
+  }
+
+  60% {
+    color: #c05c96;
+  }
+
+  80% {
+    color: #e079b5;
+  }
+}
+
+@keyframes borderColorChanger {
+  0% {
+    border: 3px solid var(--color-changer1);
+  }
+
+  40% {
+    border: 3px solid var(--color-changer2);
+  }
+
+  60% {
+    border: 3px solid var(--color-changer3);
+  }
+
+  80% {
+    border: 3px solid var(--color-changer4);
+  }
+}

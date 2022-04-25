@@ -1,0 +1,94 @@
+:root {
+  --nav-color: #000101;
+  --nav_items-color: #fff;
+}
+
+/*
+.navbar_holder_holder {
+  display: flex;
+  min-width: 45px;
+  max-width: 50px;
+  align-items: stretch;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  flex-basis: 50px;
+  flex-grow: 0;
+  flex-basis: auto;
+}
+*/
+.navbar_holder {
+  display: inline-block;
+  position: sticky;
+  width: 50px;
+  flex-basis: 50px;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  height: 100%;
+  border-right: 1px solid #fff;
+}
+
+.navbar {
+  position: fixed;
+  width: 50px;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+/* .navbar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+} */
+
+.navbar_item {
+  padding: 8px;
+  margin: 5px;
+  font-size: 40px;
+  color: var(--nav_items-color);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s background-color;
+  -webkit-transition: 0.3s background-color;
+  -moz-transition: 0.3s background-color;
+  -ms-transition: 0.3s background-color;
+  -o-transition: 0.3s background-color;
+}
+
+.navbar_item:hover {
+  background-color: rgb(131, 128, 128);
+}
+
+.active > * {
+  color: #000101;
+  background-color: #fff;
+}
+
+@media (max-width: 680px) {
+  .navbar_holder {
+    position: sticky;
+    z-index: 5;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 0;
+    height: 0;
+  }
+
+  .navbar {
+    width: 100%;
+    position: fixed;
+    background-color: #000101;
+    top: 27px;
+
+    border-bottom: 1px solid #fff;
+  }
+}
